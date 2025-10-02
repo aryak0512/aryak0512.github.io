@@ -1,86 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aryak Deshpande</title>
     <style>
-        :root {
-            --bg: #f9fafc;
-            --text: #1a1a1a;
-            --accent: #2563eb;
-            --card-bg: #fff;
-            --card-shadow: rgba(0, 0, 0, 0.08);
-        }
         body {
-            margin: 0;
             font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fb;
+            color: #333;
         }
-        .container {
+
+        header {
+            background: linear-gradient(135deg, #3a7bd5, #3a6073);
+            color: #fff;
             text-align: center;
-            background: var(--card-bg);
-            padding: 3rem 2rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px var(--card-shadow);
-            max-width: 500px;
-            width: 90%;
+            padding: 2rem;
         }
-        h1 {
-            margin: 0 0 0.5rem;
-            font-size: 2.2rem;
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
         }
-        p {
-            margin: 0 0 2rem;
-            font-size: 1.1rem;
-            color: #555;
+
+        .section {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1rem;
         }
-        .links {
+
+        .job, .recommendation {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
+            background: #fff;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
         }
-        .btn {
-            display: inline-block;
-            padding: 0.9rem 1.5rem;
-            font-size: 1.1rem;
-            font-weight: 500;
-            text-decoration: none;
-            color: white;
-            background: var(--accent);
-            border-radius: 8px;
-            transition: background 0.3s ease, transform 0.2s ease;
+
+        .job:hover, .recommendation:hover {
+            transform: translateY(-4px);
         }
-        .btn:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
+
+        .job img, .recommendation img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
         }
-        footer {
-            margin-top: 2rem;
+
+        .job-details, .rec-details {
+            flex: 1;
+        }
+
+        .job-details h2, .rec-details h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #3a6073;
+        }
+
+        .job-details h3, .rec-details h3 {
+            margin: 0.3rem 0;
+            font-size: 1rem;
+            color: #555;
+            font-weight: normal;
+        }
+
+        .date-location {
             font-size: 0.85rem;
-            color: #888;
+            color: #777;
+            margin-bottom: 0.5rem;
+        }
+
+        .rec-details p {
+            margin: 0.5rem 0 0 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #444;
+            font-style: italic;
+        }
+
+        h2.section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #3a6073;
+            border-left: 5px solid #3a7bd5;
+            padding-left: 10px;
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>👋 Hi, I'm Aryak</h1>
-    <p>I'm a hobbist software engineer.<br>Explore my work here:</p>
 
-    <div class="links">
-        <a href="https://medium.com/@aryak.d" class="btn" target="_blank">📖 Read on Medium</a>
-        <a href="https://www.youtube.com/@JavaLanes" class="btn" target="_blank">▶️ Watch on YouTube</a>
-        <a href="https://www.linkedin.com/in/aryak0512/" class="btn" target="_blank">💼 Connect on LinkedIn</a>
-        <a href="https://your-portfolio-website.com" class="btn" target="_blank">🌐 View My Portfolio</a>
-        <a href="https://github.com/aryak0512" class="btn" target="_blank">🌐 View My Github</a>
+<header style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem 1rem; background: linear-gradient(135deg, #3a7bd5, #3a6073); color: #fff;">
+    <h1 style="margin: 0; font-size: 2.5rem;">Aryak Deshpande</h1>
+    <p style="margin-top: 1rem; font-size: 1.1rem; max-width: 800px; line-height: 1.6;">
+        Hobbyist software developer and Oracle Certified Java Programmer with a keen interest in all aspects of software
+        development.<br>
+    </p>
+</header>
+
+
+<!-- Experience Section -->
+<div class="section">
+
+
+    <!-- Connect Section -->
+    <div class="section">
+        <h2 class="section-title">Connect with Me</h2>
+        <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/aryak0512" target="_blank" style="text-decoration: none;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#0A66C2">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 10.29h-3v-4.5c0-1.081-.918-2-2-2s-2 .919-2 2v4.5h-3v-9h3v1.34c.542-.813 1.68-1.34 2.5-1.34 2.206 0 4 1.794 4 4v4z"/>
+                </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/aryak0512" target="_blank" style="text-decoration: none;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#333">
+                    <path d="M12 .5c-6.627 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.111.82-.261.82-.577 0-.285-.011-1.04-.016-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.839 1.238 1.839 1.238 1.07 1.835 2.809 1.305 3.495.998.108-.775.418-1.305.76-1.605-2.665-.304-5.467-1.332-5.467-5.931 0-1.31.469-2.381 1.236-3.222-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.656 1.653.244 2.873.12 3.176.77.841 1.236 1.912 1.236 3.222 0 4.61-2.807 5.624-5.479 5.921.429.37.813 1.102.813 2.222 0 1.606-.014 2.898-.014 3.293 0 .319.216.694.825.576 4.765-1.589 8.199-6.087 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
+
+            <!-- Medium -->
+            <a href="https://medium.com/@aryak.d" target="_blank" style="text-decoration: none;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#000000">
+                    <path d="M2 6.857v10.286l6.857-5.143-6.857-5.143zm19.143 0h-2.286l-4.571 10.286h2.286l4.571-10.286zm-12.286 0h-1.143l6.857 10.286h1.143l-6.857-10.286z"/>
+                </svg>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@JavaLanes" target="_blank" style="text-decoration: none;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="#FF0000">
+                    <path d="M19.615 3.184c-1.157-.774-6.154-.774-6.154-.774s-4.997 0-6.154.774c-1.157.773-1.307 2.862-1.307 2.862s-.146 2.101-.146 4.205v2.057c0 2.104.146 4.205.146 4.205s.15 2.089 1.307 2.862c1.157.774 6.154.774 6.154.774s4.997 0 6.154-.774c1.157-.773 1.307-2.862 1.307-2.862s.146-2.101.146-4.205v-2.057c0-2.104-.146-4.205-.146-4.205s-.15-2.089-1.307-2.862zm-10.615 9.816v-5l5 2.5-5 2.5z"/>
+                </svg>
+            </a>
+        </div>
     </div>
 
-    <footer>© 2025 Aryak Deshpande</footer>
+    <h2 class="section-title">Experience</h2>
+
+    <!-- Barclays -->
+    <div class="job">
+        <div class="job-details">
+            <h2>Software Engineer - BA4</h2>
+            <h3>Barclays · Full-time</h3>
+            <div class="date-location">Feb 2025 – Present · 9 mos | Pune, Maharashtra, India</div>
+            <p>Building the backend of post-trade systems for UK Markets using <b>Spring Batch</b>, <b>Spring Boot</b>,
+                and <b>Spring Kafka</b>.</p>
+        </div>
+    </div>
+
+    <!-- Netcore -->
+    <div class="job">
+        <div class="job-details">
+            <h2>Software Engineer</h2>
+            <h3>Netcore Cloud · Full-time</h3>
+            <div class="date-location">Sep 2023 – Feb 2025 · 1 yr 6 mos | Mumbai, Maharashtra, India</div>
+            <p>Refactored the legacy <b>Bulksms</b> module from monolith to microservices, migrated 1000+ clients, and
+                scaled to ~<b>50M requests/day</b>.
+                Skills: <b>Redis</b>, <b>Garbage Collection</b>.</p>
+        </div>
+    </div>
+
+    <!-- Loylty Rewardz -->
+    <div class="job">
+        <div class="job-details">
+            <h2>Software Engineer</h2>
+            <h3>Loylty Rewardz · Full-time</h3>
+            <div class="date-location">Mar 2022 – Sep 2023 · 1 yr 7 mos | Mumbai, Maharashtra, India</div>
+            <p>Core developer of a <b>real-time data ingestion Kafka pipeline</b>, replacing legacy SFTP-based
+                solutions.
+                Skills: <b>Spring Boot</b>, <b>Apache Kafka</b>.</p>
+        </div>
+    </div>
+
+    <!-- Accenture -->
+    <div class="job">
+        <div class="job-details">
+            <h2>Associate Software Engineer</h2>
+            <h3>Accenture · Full-time</h3>
+            <div class="date-location">Jun 2021 – Feb 2022 · 9 mos | Mumbai, Maharashtra, India · Remote</div>
+            <p>Contributed to enterprise software projects as an <b>ASE</b> with a focus on scalable backend systems.
+            </p>
+        </div>
+    </div>
 </div>
+
+
+<!-- Honors & Awards Section -->
+<div class="section">
+    <h2 class="section-title">Honors & Awards</h2>
+
+    <div class="job">
+        <div class="job-details">
+            <h2>Outside the Box Thinker Award</h2>
+            <h3>Apr 2023 · Loylty Rewardz</h3>
+            <p>Recognized for creative problem-solving and innovative contributions.</p>
+        </div>
+    </div>
+
+    <div class="job">
+        <div class="job-details">
+            <h2>Special Tech Award</h2>
+            <h3>Aug 2022 · Loylty Rewardz</h3>
+            <p>Received cash award of INR 50,000 during probation period (within 6 months of joining the organisation)
+                for technical excellence.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Recommendations Section -->
+<div class="section">
+    <h2 class="section-title">Recommendations</h2>
+
+    <!-- Vishal -->
+    <div class="recommendation" style="flex-direction: column; gap: 0.5rem;">
+        <div class="rec-details">
+            <h2>Vishal Vyas</h2>
+            <h3>VP Engineering @ Netcore Cloud</h3>
+            <div class="date-location">Feb 6, 2025 · Manager</div>
+            <p>"Aryak is an exceptional engineer with strong fundamentals. He played a key role in transforming a bulky
+                Java monolith into scalable microservices, cutting technical debt and infrastructure costs. A great
+                problem solver and team player."</p>
+        </div>
+    </div>
+
+    <!-- Anandh -->
+    <div class="recommendation" style="flex-direction: column; gap: 0.5rem;">
+        <div class="rec-details">
+            <h2>Anandh Kumar</h2>
+            <h3>Associate Vice President</h3>
+            <div class="date-location">Feb 5, 2025 · Senior Colleague</div>
+            <p>"Aryak is hardworking, dedicated, and always brings positive energy to the team. Skilled in Java and a
+                reliable team player, he consistently helps others and solves problems effectively."</p>
+        </div>
+    </div>
+
+    <!-- Kuldeep -->
+    <div class="recommendation" style="flex-direction: column; gap: 0.5rem;">
+        <div class="rec-details">
+            <h2>Kuldeep Sengar</h2>
+            <h3>Group CTO</h3>
+            <div class="date-location">Jul 9, 2023 · Senior Colleague</div>
+            <p>"Aryak is extremely hardworking, result-focused, and demonstrates outstanding problem-solving skills. He
+                consistently delivered innovative solutions and aligned his growth mindset with every opportunity."</p>
+        </div>
+    </div>
+
+    <!-- Hatim -->
+    <div class="recommendation" style="flex-direction: column; gap: 0.5rem;">
+        <div class="rec-details">
+            <h2>Hatim Motorwala</h2>
+            <h3>Lead Product Architect</h3>
+            <div class="date-location">Jan 3, 2023 · Senior Colleague</div>
+            <p>"Aryak is a reliable developer, quick learner, and highly skilled at Java. He applies his knowledge
+                effectively, improves workflows, and takes challenges with passion and minimal supervision."</p>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Publications Section -->
+<div class="section">
+    <h2 class="section-title">Publications</h2>
+
+    <div class="job">
+        <div class="job-details">
+            <h2>FunJokes Plugin for IntelliJ</h2>
+            <h3>JetBrains · Mar 14, 2025</h3>
+            <p>A custom plugin for the popular JetBrains IDE - IntelliJ. This fun plugin, a side project written in
+                Kotlin, tells you a joke every time you ask it to. <b>200+ installs</b> from IntelliJ plugin hub by
+                developers across the world.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer style="background: #3a6073; color: #fff; padding: 2rem 1rem; text-align: center; margin-top: 3rem;">
+    <p style="margin: 0 0 1rem 0; font-size: 1rem;">
+        © 2025 Aryak Deshpande. All rights reserved.
+    </p>
+
+    <p style="margin: 0; font-size: 0.9rem; color: #ccc;">
+        Crafted with ❤️ using HTML & CSS
+    </p>
+</footer>
 </body>
 </html>
